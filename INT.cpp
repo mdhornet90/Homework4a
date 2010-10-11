@@ -6,7 +6,7 @@ INT::INT(int y)
 }
 INT::INT()
 {
-    x;
+    x = 0;
 }
 
 INT& INT::operator=(INT &y)
@@ -42,25 +42,23 @@ INT INT::operator*(INT &y)
 
 INT& INT::operator++()
 {
-    x++;
-    return *this;
+    return INT(x++);
 }
 
 INT INT::operator++(int)
 {
-    x++;
+    ++x;
     return *this;
 }
 
 INT& INT::operator--()
 {
-    x--;
-    return *this;
+    return INT(x--);
 }
 
 INT INT::operator--(int)
 {
-    x--;
+    --x;
     return *this;
 }
 
