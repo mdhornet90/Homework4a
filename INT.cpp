@@ -42,24 +42,24 @@ INT INT::operator*(INT &y)
 
 INT& INT::operator++()
 {
-    return INT(x++);
+     ++x;
+     return *this;
 }
 
 INT INT::operator++(int)
 {
-    ++x;
-    return *this;
+    return (INT)++x;
 }
 
 INT& INT::operator--()
 {
-    return INT(x--);
+    --x;
+    return *this;
 }
 
 INT INT::operator--(int)
 {
-    --x;
-    return *this;
+    return (INT) --x;
 }
 
 INT& INT::operator+=(INT &y)
